@@ -1,0 +1,9 @@
+<ng-template [ngIf]="post$ | async" let-post="ngIf">
+  <mat-toolbar color="primary">
+    <matx-back-button></matx-back-button>
+    <span>Post {{post.id}}</span>
+  </mat-toolbar>
+
+  <main class="py-3">
+  </main>
+</ng-template>

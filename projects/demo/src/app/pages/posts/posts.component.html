@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <matx-menu-button></matx-menu-button>
+  <span>Posts</span>
+</mat-toolbar>
+
+<main class="py-3">
+  <dt-table [data]="posts$" [loading]="loading$ | async" style="height: 100%"
+            [pageIndex]="page.index" [pageSize]="page.size">
+    <mat-progress-bar *dtLoading mode="indeterminate"></mat-progress-bar>
+    <dt-column field="id" header="Id" width="25px"></dt-column>
+    <dt-column header="Title / Body">
+      <div *dtCell="let post = item">
+        <h2><a routerLink="edit/{{post.id}}">{{post.title}}</a></h2>
+        <p>{{post.body}}</p>
+      </div>
+    </dt-column>
+  </dt-table>
+
+</main>
+
+<mat-paginator [pageSize]="page.size" [pageIndex]="page.index - 1" [pageSizeOptions]="[10, 25, 50]"
+               [length]="total$ | async"
+               (page)="findPage($event)"></mat-paginator>

@@ -1,0 +1,15 @@
+{
+  "name": "ngrx-data-paged",
+  "version": "10.1.0",
+  "peerDependencies": {
+    "@angular/common": "^11.0.3",
+    "@angular/core": "^11.0.3",
+    "@ngrx/data": "^10.1.0",
+    "@ngrx/effects": "^10.1.0",
+    "@ngrx/entity": "^10.1.0",
+    "@ngrx/store": "^10.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
